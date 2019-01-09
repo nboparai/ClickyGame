@@ -55,17 +55,17 @@ class App extends Component {
 
   handleScore = () => {
 
-    const newScroe = this.state.currentScore + 1;
+    const newScore = this.state.currentScore + 1;
     this.setState({
-      currentScore: newScroe
+      currentScore: newScore
     });
 
-    if(newScroe >= this.topScore) {
+    if (newScore >= this.state.topScore) {
       this.setState({
-        topScore: newScroe
+        topScore: newScore
       });
     }
-    else if (newScroe == 12) {
+    else if (newScore === 12) {
       this.setState({
         win: "You got it! Let's play again"
       })
